@@ -1,3 +1,4 @@
+//Vowel or Consonant using switch case
 #include<stdio.h>
 main()
 {
@@ -5,7 +6,7 @@ main()
 	printf("enter character : ");
 	scanf("%c",&n);
 	
-	switch(n)
+	switch(n)                // switch case 
 	{
 		case 'A':
      	printf("%c is vowel",n);
