@@ -1,3 +1,4 @@
+//Write a program make a summation of given number 
 #include <stdio.h>
 main() 
 {
@@ -10,14 +11,14 @@ main()
     
     if (n < 0) 
 	{
-        n = -n;
+        n = -n;  // if number is in negitive than convert it
     }
 
 
     while (n != 0) 
 	{
         remainder = n%10; 
-        sum+= remainder;      
+        sum+= remainder;       // summition of all numbers
         n/= 10;     
     }
 
