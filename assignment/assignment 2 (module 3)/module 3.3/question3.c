@@ -1,3 +1,4 @@
+//WAP to find reverse of string using recursion  
 #include <stdio.h>
 reverseString(char *str, int start, int end) 
 {
@@ -6,7 +7,7 @@ reverseString(char *str, int start, int end)
         return;
     }
 
-    char temp = str[start];
+    char temp = str[start];          // swapping
     str[start] = str[end];
     str[end] = temp;
 
@@ -15,12 +16,12 @@ reverseString(char *str, int start, int end)
 
 main() 
 {
-    char str[] = "Hello, World!";
+    char str[] = "Hello, World!";     // char
 
     int length = 0;
     while (str[length] != '\0') 
 	{
-        length++;
+        length++;                 //increment in length
     }
 
     reverseString(str, 0, length - 1);
