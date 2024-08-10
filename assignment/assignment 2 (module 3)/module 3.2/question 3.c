@@ -1,3 +1,4 @@
+//Write a program to find number is even or odd  
 #include<stdio.h>
 main()
 {
@@ -7,7 +8,7 @@ main()
 	
 	if(n==0)
 	{
-		printf("%d is zero : ");
+		printf("%d is zero : ");          
 	}
 	else if(n%2==0)
 	{
