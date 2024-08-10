@@ -1,3 +1,4 @@
+//WAP to find factorial using recursion  
 #include <stdio.h>
 factorial() 
 {
@@ -9,7 +10,7 @@ factorial()
 	for(i=1;i<=n;i++)
 	
 	{
-		fac=fac*i;
+		fac=fac*i;             // formula of factorial
 	}
 	{
 		printf("fectorial number :%d",fac);
