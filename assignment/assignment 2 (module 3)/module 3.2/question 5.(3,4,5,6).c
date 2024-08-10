@@ -1,3 +1,4 @@
+// sum of even number and sum of odd number
 #include<stdio.h>
 main()
 {
@@ -6,18 +7,18 @@ main()
 	while(i<=5);
 	printf("enter number :");
 	scanf("%d",&n);
-	{
-		if(n%2==0)
+	{                           
+		if(n%2==0)        //defined even number 
 		{
 			printf("number is eve number : ",n);
-			ev++;
-			evcount=evcount+i;
+			ev++;      
+			evcount=evcount+i;         // counting of even numbers 
 		}
 		else
 		{
 			printf("number is odd number : ",n);
 			odd;
-			oddcount=oddcount+i;
+			oddcount=oddcount+i;       // counting of odd numbers
 		}
 		i++;
 	}
