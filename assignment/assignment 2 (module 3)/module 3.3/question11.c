@@ -1,3 +1,4 @@
+//WAP to show difference between Structure and Union.
 #include <stdio.h>
 #include <string.h>
 
@@ -29,11 +30,11 @@ main()
     empUnion.salary = 50000.50;
 
     printf("Structure:\n");
-    printf("Employee Number: %d\n", empStruct.empno);
+    printf("Employee Number: %d\n", empStruct.empno);      // PRINT FOR STRUCTURE
     printf("Employee Name: %s\n", empStruct.empname);
     printf("Employee Salary: %.2f\n", empStruct.salary);
 
-    printf("\nUnion (after setting all members):\n");
+    printf("\nUnion (after setting all members):\n");     //PRINT FOR UNION
     printf("Employee Number: %d\n", empUnion.empno);
     printf("Employee Name: %s\n", empUnion.empname);
     printf("Employee Salary: %.2f\n", empUnion.salary);
