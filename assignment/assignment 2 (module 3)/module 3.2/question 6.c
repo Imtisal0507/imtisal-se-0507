@@ -1,3 +1,4 @@
+//Write a program to print factorial of given number   
 #include<stdio.h>
 main()
 {
@@ -7,7 +8,7 @@ main()
 	
 	for(i=1;i<=n;i++)
 	{
-		fac=fac*i;
+		fac=fac*i;          // formula of factorial number 
 	}
 	printf("%d",fac);
 }
