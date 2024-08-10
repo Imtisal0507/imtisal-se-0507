@@ -1,3 +1,5 @@
+//A
+//B C
 #include<stdio.h> 
 main()
 {
