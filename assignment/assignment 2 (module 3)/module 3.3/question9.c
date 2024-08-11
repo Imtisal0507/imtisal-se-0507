@@ -1,3 +1,5 @@
+//Write a program of structure employee that provides the following 
+//information -print and display empno, empname, address and age
 #include <stdio.h>
 
 struct Employee 
@@ -26,11 +28,11 @@ inputEmployee(struct Employee *emp)
 
 printEmployee(struct Employee emp) 
 {
-    printf("\nEmployee Details:\n");
-    printf("Employee Number: %d\n", emp.empno);
-    printf("Employee Name: %s\n", emp.empname);
-    printf("Employee Address: %s\n", emp.address);
-    printf("Employee Age: %d\n", emp.age);
+    printf("\nEmployee Details:\n");          //Employye details
+    printf("Employee Number: %d\n", emp.empno);  //Employye numbers
+    printf("Employee Name: %s\n", emp.empname);   //employye name
+    printf("Employee Address: %s\n", emp.address);   //employee address
+    printf("Employee Age: %d\n", emp.age);     //employye age
 }
 
 int main() {

@@ -1,3 +1,5 @@
+//WAP to make addition, Subtraction and multiplication of two matrix using 
+//2-D Array 
 #include<stdio.h>
 add()
 {   
@@ -8,7 +10,7 @@ add()
 	{
 		for(j=0;j<3;j++)
 		{
-			printf("%d\t",a[i][j]+b[i][j]);
+			printf("%d\t",a[i][j]+b[i][j]);    // addition of 2 d array
 		}
 		printf("\n");
 	}
@@ -23,7 +25,7 @@ sub()
 	{
 		for(j=0;j<3;j++)
 		{
-			printf("%d\t",a[i][j]-b[i][j]);
+			printf("%d\t",a[i][j]-b[i][j]);  //sub of 2 d array
 		}
 		printf("\n");
 	}	
@@ -37,7 +39,7 @@ mul()
 	{
 		for(j=0;j<3;j++)
 		{
-			printf("%d\t",a[i][j]*b[i][j]);
+			printf("%d\t",a[i][j]*b[i][j]);   //mul of 2 d array
 		}
 		printf("\n");
 	}

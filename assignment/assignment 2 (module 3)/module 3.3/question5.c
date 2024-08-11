@@ -1,3 +1,5 @@
+//ascending or descending order
+
 #include<stdio.h>
 asending()
 {
@@ -16,7 +18,7 @@ asending()
 			if(a[i]>a[j])
 		{
 				
-		temp=a[i];
+		temp=a[i];    // swapping
 		a[i]=a[j];
 		a[j]=temp;
 	}
@@ -44,7 +46,7 @@ desending()
 			if(a[i]<a[j])
 		{
 				
-		temp=a[i];
+		temp=a[i];   // swapping
 		a[i]=a[j];
 		a[j]=temp;
 	}

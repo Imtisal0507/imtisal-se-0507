@@ -1,3 +1,4 @@
+// Monday to Sunday using switch case  
 #include <stdio.h>
 
 main()

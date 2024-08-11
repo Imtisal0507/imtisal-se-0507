@@ -1,3 +1,5 @@
+//WAP of Addition, Subtraction, Multiplication and Division using Switch 
+//case.
 #include<stdio.h>
 main()
 
@@ -14,19 +16,19 @@ main()
     switch(choice)
     {
     case 1	:
-        printf("Sum of %d and %d is : %d",a,b,a+b);
+        printf("Sum of %d and %d is : %d",a,b,a+b);  // addition 
         break;
     case 2	:
-        printf("Difference of %d and %d is : %d",a,b,a-b);
+        printf("Difference of %d and %d is : %d",a,b,a-b);  // substraction
         break;
     case 3	:
-        printf("Multiplication of %d and %d is : %d",a,b,a*b);
+        printf("Multiplication of %d and %d is : %d",a,b,a*b);  // multiplication
         break;
     case 4	:
-        printf("Division of Two Numbers is %.2f : ",(float)a/b);
+        printf("Division of Two Numbers is %.2f : ",(float)a/b);  // division
         break;
     default	:
-        printf(" Enter Your choice between 1 to 4!!!!!!!!!");
+        printf(" Enter Your choice between 1 to 4!!!!!!!!!");  
         break;
     }
 }
