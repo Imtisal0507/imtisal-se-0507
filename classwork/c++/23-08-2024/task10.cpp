@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+class A{
+	public:
+	int a;
+};
+class B:public A{
+	public:
+	fun()
+	{
+		cout<<"Enter a number a"<<endl;
+		cin>>a;
+	}
+};
+class C{
+	public:
+	int b;
+	
+};
+class D:public B,public C{
+	public:
+	fun()
+	{
+		B::fun();
+		cout<<"Enter a number b"<<endl;
+		cin>>b;
+	}
+};
+
+
+
+
+main()
+{
+   D obj;
+   obj.fun();
+}

@@ -3,10 +3,11 @@ using namespace std;
 class A{
 	public:
 		name()
-		{    
-		char a;
+		{  
+		int i;  
+		char a[100];
 		 cout<<"Enter a name:";
-		 cin>>a;
+		 cin>>a[i];
 		 
 		 
 		}
@@ -16,16 +17,16 @@ class B:public A{
 		results()
 		{
 			int a,b,c;
-			cout<<"Enter a maths result :";
+			cout<<"Enter a maths result :"<<endl;
 			cin>>a;
-			cout<<"Enter a english result :";
+			cout<<"Enter a english result :"<<endl;
 			cin>>b;
-			cout<<"Enter a science result :";
+			cout<<"Enter a science result :"<<endl;
 			cin>>c;
 			
 			
-			cout<<"Addition of a result"<<endl<<a+b+c;
-			cout<<"Average of result:"<<endl<<a+b+c%3;
+			cout<<"Total result :"<<a+b+c<<endl;
+			cout<<"persentage :"<<endl<<a+b+c%3;
 			
 		}
 };
