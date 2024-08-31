@@ -1,5 +1,5 @@
 #include<stdio.h>
-pizza()
+pizza()       // For screen presentation of menue
 {
 	printf("\n1. Pizza         Price = 180rs/pcs");
 	
@@ -20,13 +20,13 @@ idli()
 
 
 
-choice()
+choice()          //choice for user 
 {
 	int choice,i=1;
 for(i=1;i<=4;i++)
 {
 
-		printf("\nEnter choice : ");
+		printf("\nEnter choice : ");   // Enter a choice for user
 		scanf("%d",&choice);
 		
 		if(choice==1)
@@ -38,7 +38,7 @@ for(i=1;i<=4;i++)
            printf("\nEnter the quantity:");
            scanf("%d",&n);
            
-           	printf("\nTotal Amount:%d",i*n);
+           	printf("\nTotal Amount:%d",i*n);     // addition of amount
            	break;
 
 		}
@@ -53,7 +53,7 @@ for(i=1;i<=4;i++)
            printf("\nEnter the quantity:");
            scanf("%d",&n);
            
-           	printf("\nTotal Amount:%d",i*n);
+           	printf("\nTotal Amount:%d",i*n);     // addition of amount
 			break;   	
 		}
 		else if(choice==3)
@@ -65,7 +65,7 @@ for(i=1;i<=4;i++)
            printf("\nEnter the quantity:");
            scanf("%d",&n);
            
-           	printf("\nTotal Amount:%d",i*n);
+           	printf("\nTotal Amount:%d",i*n);     // addition of amount
            	break;
 		}
 		else if(choice==4)
@@ -77,7 +77,7 @@ for(i=1;i<=4;i++)
            printf("\nEnter the quantity:");
            scanf("%d",&n);
            
-           	printf("\nTotal Amount:%d",i*n);
+           	printf("\nTotal Amount:%d",i*n);           // addition of amount
            	break;
 		}
 		else
