@@ -1,5 +1,5 @@
 #include<stdio.h>
-pizza()       // For screen presentation of menue
+pizza()
 {
 	printf("\n1. Pizza         Price = 180rs/pcs");
 	
@@ -18,15 +18,24 @@ idli()
 }
 
 
-
-
-choice()          //choice for user 
+choice()
 {
-	int choice,i=1;
-for(i=1;i<=4;i++)
+	while(1)
 {
+	int i,n;
+	printf("\n......................MENU.......................");
+pizza();
+burger();
+dosa();
+idli();
 
-		printf("\nEnter choice : ");   // Enter a choice for user
+
+char choice;
+char moreOrders;
+char total;
+
+
+		printf("\nEnter choice : ");
 		scanf("%d",&choice);
 		
 		if(choice==1)
@@ -38,12 +47,10 @@ for(i=1;i<=4;i++)
            printf("\nEnter the quantity:");
            scanf("%d",&n);
            
-           	printf("\nTotal Amount:%d",i*n);     // addition of amount
-           	break;
+           	printf("\nTotal Amount:%d",i*n);
+           	
 
 		}
-		
-
 		else if(choice==2)
 		{
 		         int n=0,i=100;
@@ -53,8 +60,8 @@ for(i=1;i<=4;i++)
            printf("\nEnter the quantity:");
            scanf("%d",&n);
            
-           	printf("\nTotal Amount:%d",i*n);     // addition of amount
-			break;   	
+           	printf("\nTotal Amount:%d",i*n);
+			   	
 		}
 		else if(choice==3)
 		{
@@ -65,43 +72,44 @@ for(i=1;i<=4;i++)
            printf("\nEnter the quantity:");
            scanf("%d",&n);
            
-           	printf("\nTotal Amount:%d",i*n);     // addition of amount
-           	break;
+           	printf("\nTotal Amount:%d",i*n);
+           	
 		}
 		else if(choice==4)
 		{
-			         int n=0,i=180;
+			         int n=0,i=50;
          printf("You have selected Idli");
          
          
            printf("\nEnter the quantity:");
            scanf("%d",&n);
            
-           	printf("\nTotal Amount:%d",i*n);           // addition of amount
-           	break;
+           	printf("\nTotal Amount:%d",i*n);
+           	
+		}
+		else if(moreOrders == 'y' || moreOrders == 'Y')
+		{
+			printf("Your total amount is %.2f\n",total);
+
 		}
 		else
 		{
 			printf("Invalid choice!!!!!!!!!!!!!");
 			break;
 		}
+	}
 }
-}
+
 
 main()
 {
-	printf("......................MENU.......................");
-pizza();
-burger();
-dosa();
-idli();
 choice();
-
-
-
-	
-
-
 }
+
+		
+
+
+
+
 
 
