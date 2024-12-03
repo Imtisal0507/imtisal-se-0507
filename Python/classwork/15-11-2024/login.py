@@ -1,5 +1,5 @@
 import random
-n = random.randint
+n = random.randint(1000,9999)
 d = {}
 
 while True:
@@ -15,7 +15,7 @@ while True:
 
     if choice==1:
         print("***************************Welcome to signup page***************************")
-        name = input("Enter yiur name :")
+        name = input("Enter your name :")
         email = input("Enter your Email :")
         mobile = int(input("Enter your mobile number :"))
         password = int(input("Enter your password :"))

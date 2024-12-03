@@ -19,3 +19,4 @@ print(l)
 
 l.reverse()             #for reverse a elements
 print(l)
+

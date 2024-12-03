@@ -11,4 +11,5 @@ print(s.index("h"))               #for giving a index to perticular char
 print(s.isalnum())                   
 print(s.replace("i","a"))             #for replace a char
 print(s.swapcase())                    #for swapping
-print(s.title())                  
+print(s.title()) 
+                 
