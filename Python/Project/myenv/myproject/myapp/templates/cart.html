@@ -1,0 +1,122 @@
+{% extends "header.html" %}
+{% block content %}
+
+    <div class="hero-wrap hero-bread" style="background-image: url('images/bg_6.jpg');">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <p><a href="/index" class="btn btn-black py-3 px-5">ADD MORE CART</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section ftco-cart">
+			<div class="container">
+				<div class="row">
+    			<div class="col-md-12 ftco-animate">
+    				<div class="cart-list">
+	    				<table class="table">
+						    <thead class="thead-primary">
+						      <tr class="text-center">
+						        <th>&nbsp;</th>
+						        <th>&nbsp;</th>
+						        <th>Product</th>
+						        <th>Price</th>
+						        <th>Quantity</th>
+						        <th>Total</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+						      <tr class="text-center">
+								{% for item in cart %}
+						        <td class="product-remove"><a href="{% url 'dcart' pk=item.id %}"><span class="ion-ios-close"></span></a></td>
+						        
+						        <td class="image-prod">
+									<div class="img" style="background-image: url('{{ item.product.image.url }}');"></div>
+								</td>
+						        
+						        <td class="product-name">
+						        	<h3>{{ item.product.pname }}</h3>
+						        	<p>Far far away, behind the word mountains, far from the countries</p>
+						        </td>
+						        
+						        <td class="price">{{ item.product.price }}</td>
+						        
+						        <td class="quantity">
+						        	<div class="input-group mb-3">
+					             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
+					          	</div>
+					          </td>
+						        
+						        <td class="total">$4.90</td>
+						      </tr><!-- END TR-->
+
+						        
+						        
+						        {% endfor %}
+					         
+						    </tbody>
+						  </table>
+					  </div>
+    			</div>
+    		</div>
+    		<div class="row justify-content-center">
+    			<div class="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
+    				<div class="cart-total mb-3">
+
+    					<h3>Cart Totals</h3>
+    					
+
+    					<hr>
+    					<p class="d-flex total-price">
+    						<span>Total</span>
+    						<span>{{total_price}}</span>
+    					</p>
+    				</div>
+    				<p class="text-center"><a href="checkout.html" class="btn btn-primary py-3 px-4" id="rzp-button1">Proceed to Checkout</a></p>
+    			</div>
+    		</div>
+			</div>
+		</section>
+
+
+		<script>
+            var options = {
+                "key": "rzp_test_3iCOPLbchUyIwQ", // Enter the Key ID generated from the Dashboard
+                "amount": "{{context.payment.amount}}",// Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+                "currency": "INR",
+                "name": "Winkel Master",
+                "description": "Test Payment", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+                "handler": function (response){
+   
+                    window.location.href=`http://localhost:8000/sucess?razorpay_payment_id=${response.razorpay_payment_id}`
+   
+                    // alert(response.razorpay_payment_id);
+                    // alert(response.razorpay_order_id);
+                   
+                },
+                "theme": {
+                    "color": "#94CA21"
+                }
+            };
+            var rzp1 = new Razorpay(options);
+            rzp1.on('payment.failed', function (response){
+                    alert(response.error.code);
+                    alert(response.error.description);
+                    alert(response.error.source);
+                    alert(response.error.step);
+                    alert(response.error.reason);
+                    alert(response.error.metadata.order_id);
+                    alert(response.error.metadata.payment_id);
+            });
+            document.getElementById('rzp-button1').onclick = function(e){
+                rzp1.open();
+                e.preventDefault();
+            }
+        </script>
+    
+  </body>
+</html>
+
+{% endblock %}

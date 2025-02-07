@@ -1,0 +1,156 @@
+{% extends "header.html" %}
+{% load static %}
+
+{% block content %}
+
+<head>
+	<style>
+		.img-prod img {
+			width: 300px;  /* Set your desired width */
+			height: 200px; /* Set your desired height */
+			object-fit: cover; /* Ensures the image covers the area without distortion */
+		}
+	</style>
+</head>
+  <body class="goto-here">
+
+
+    
+
+    <div class="hero-wrap hero-bread" style="background-image: url('{% static 'images/bg_6.jpg' %}');">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Products</span></p>
+            <h1 class="mb-0 bread">Collection Products</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section bg-light">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-8 col-lg-10 order-md-last">
+    				<div class="row">
+		    			
+		    		
+		    			
+						{% for i in product %}
+		    			<div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
+		    				<div class="product">
+		    					<a href="#" class="img-prod"><img class="img-fluid" src="{{ i.image.url }}" alt="{{ i.name }}">
+		    						<div class="overlay"></div>
+		    					</a>
+		    					<div class="text py-3 px-3">
+		    						<h3><a href="#">{{ i.pname }}</a></h3>
+		    						<div class="d-flex">
+		    							<div class="pricing">
+				    						<p class="price"><span>${{ i.price }}</span></p>
+				    					</div>
+				    					<div class="rating">
+			    							<p class="text-right">
+			    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+			    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+			    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+			    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+			    								<a href="#"><span class="ion-ios-star-outline"></span></a>
+			    							</p>
+			    						</div>
+			    					</div>
+		    						<p class="bottom-area d-flex px-3">
+		    							<a href="{% url 'addcart' pk=i.pk %}" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+		    							<a href="{% url 'mdetail' pk=i.pk %}" class="add-to-cart text-center py-2 mr-1"><span>more details<i class="ion-ios-add ml-1"></i></span></a>
+
+		    							<a href="{% url 'addwish' pk=i.pk %}" class="buy-now text-center py-2" style="display: inline-flex; justify-content: center; align-items: center; width: 32px; height: 32px; border-radius: 50%; padding: 6px; background-color:rgb(249, 247, 247);">
+
+
+											<span>
+											  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+												<path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+											  </svg>
+											</span>
+										  </a>
+										  
+		    						</p>
+		    					</div>
+
+		    				</div>
+
+		    		    </div>
+				{% endfor %}
+
+		    			
+		    		</div>
+		    		<div class="row mt-5">
+		          <div class="col text-center">
+		            <div class="block-27">
+		              <ul>
+		                <li><a href="#">&lt;</a></li>
+		                <li class="active"><span>1</span></li>
+		                <li><a href="#">2</a></li>
+		                <li><a href="#">3</a></li>
+		                <li><a href="#">4</a></li>
+		                <li><a href="#">5</a></li>
+		                <li><a href="#">&gt;</a></li>
+		              </ul>
+		            </div>
+		          </div>
+		        </div>
+		    	</div>
+
+		    	<div class="col-md-4 col-lg-2 sidebar">
+		    		<div class="sidebar-box-2">
+		    			<h2 class="heading mb-4"><a href="#">Clothing</a></h2>
+		    			<ul>
+		    				<li><a href="#">Shirts &amp; Tops</a></li>
+								<li><a href="#">Dresses</a></li>
+								<li><a href="#">Shorts &amp; Skirts</a></li>
+								<li><a href="#">Jackets</a></li>
+								<li><a href="#">Coats</a></li>
+								<li><a href="#">Sleeveless</a></li>
+								<li><a href="#">Trousers</a></li>
+								<li><a href="#">Winter Coats</a></li>
+								<li><a href="#">Jumpsuits</a></li>
+		    			</ul>
+		    		</div>
+		    		<div class="sidebar-box-2">
+		    			<h2 class="heading mb-4"><a href="#">Jeans</a></h2>
+		    			<ul>
+		    				<li><a href="#">Shirts &amp; Tops</a></li>
+								<li><a href="#">Dresses</a></li>
+								<li><a href="#">Shorts &amp; Skirts</a></li>
+								<li><a href="#">Jackets</a></li>
+								<li><a href="#">Coats</a></li>
+								<li><a href="#">Jeans</a></li>
+								<li><a href="#">Sleeveless</a></li>
+								<li><a href="#">Trousers</a></li>
+								<li><a href="#">Winter Coats</a></li>
+								<li><a href="#">Jumpsuits</a></li>
+		    			</ul>
+		    		</div>
+		    		<div class="sidebar-box-2">
+		    			<h2 class="heading mb-2"><a href="#">Bags</a></h2>
+		    			<h2 class="heading mb-2"><a href="#">Accessories</a></h2>
+		    		</div>
+						<div class="sidebar-box-2">
+		    			<h2 class="heading mb-4"><a href="#">Shoes</a></h2>
+		    			<ul>
+		    				<li><a href="#">Nike</a></li>
+								<li><a href="#">Addidas</a></li>
+								<li><a href="#">Skechers</a></li>
+								<li><a href="#">Jackets</a></li>
+								<li><a href="#">Coats</a></li>
+								<li><a href="#">Jeans</a></li>
+		    			</ul>
+		    		</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+    
+  
+
+{% endblock %}

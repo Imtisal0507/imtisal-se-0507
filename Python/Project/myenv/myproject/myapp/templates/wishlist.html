@@ -1,0 +1,62 @@
+{% extends "header.html" %}
+{% load static %}
+
+{% block content %}
+<head>
+
+</head>
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-3 pb-3">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h2 class="mb-4">Wishlist</h2>
+                <p><a href="/index" class="btn btn-black py-3 px-5">Add more</a></p>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for i in wishlist %}
+            <div class="col-sm-6 col-md-4 col-lg-3 ftco-animate">
+                <div class="product d-flex flex-column">
+                    <a href="#" class="img-prod">
+                        {% if i.product.image %}
+                            <img class="img-fluid product-image" src="{{ i.product.image.url }}" alt="{{ i.product.pname }}">
+                        {% else %}
+                            <img class="img-fluid product-image" src="{% static 'default-image.jpg' %}" alt="Default Image">
+                        {% endif %}
+                        <div class="overlay"></div>
+                    </a>
+                    
+                    <div class="text py-3 px-3 flex-grow-1">
+                        <h3><a href="#">{{ i.product.pname }}</a></h3>
+                        <div class="d-flex justify-content-between">
+                            <div class="pricing">
+                                <p class="price"><span>${{ i.product.price|floatformat:2 }}</span></p>
+                            </div>
+                            <div class="rating">
+                                <p class="text-right">
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <p><a href="{% url 'dwishlist' pk=i.pk %}" class="btn btn-black py-3 px-5">Delete Wishlist</a></p>	
+
+
+                    
+                            
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+
